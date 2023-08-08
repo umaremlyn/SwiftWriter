@@ -1,0 +1,8 @@
+crispy-bootstrap5
+Django
+django-crispy-forms
+Pillow
+plotly
+psycopg2
+dj-database-url
+django-environ

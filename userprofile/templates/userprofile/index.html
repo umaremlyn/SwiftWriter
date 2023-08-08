@@ -1,0 +1,363 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'userprofile/css/landing.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <title>SmartWriter</title>
+    <link rel="stylesheet" href="{% static 'userprofile/css/opskill-widgets.css' %}">
+    <link rel="stylesheet" href="{% static 'userprofile/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'userprofile/css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'userprofile/css/classic-themes.min.css' %}">
+    <!-- Your additional stylesheets -->
+
+    <!-- Your custom inline styles -->
+    <style>
+    	body{
+    		background-color: #f8f9fa;
+    	}
+		.hero {
+        background-color: #87CEEB; /* Add this line to style the Hero section background */
+    }
+  
+    </style>
+</head>
+<body class="home">
+
+<!-- Header Section -->
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-white">
+		<div class="container">
+			<div class="logo">
+				<a class="navbar-brand" href="/">SmartWriter
+					<!-- <img src="{% static 'images/logo.png' %}" alt="SmartWriter Logo"> -->
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <!-- <li class="nav-item active"><a href="#">Home</a></li> -->
+				  <li class="nav-item">
+			        <a class="nav-link" href="#">Services</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">How It Works</a></li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About Us</a></li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Contact Us</a></li>
+		        </ul>
+				{% if user.is_authenticated %}
+				<ul class="navbar-nav my-lg-0">
+				 <a href="/logout/" class="btn btn-success">Logout</a>
+				</ul>
+				{% else %}
+				 <ul class="navbar-nav my-lg-0">
+				 <a href="/login/" class="btn btn-success">Get Started</a>
+				</ul>
+				{% endif %}
+			 </div>
+	   </div>
+   </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+	<div class="container-fluid bg-white py-5">
+		<div class="container mb-5">
+			<div class="row mb-5">
+				<div class="col-md-6 my-5 py-5">
+					<h1 class="mt-5">Unlock Your Potential with Expert Writing Services</h1>
+					<p class="my-4">From Academic Excellence to Professional Success</p>
+					<a href="#services" class="btn btn-lg mt-5 btn-success">    Explore Our Services   </a> 
+			</div>
+			<div class="col-md-6 my-5 py-5">
+			<img class="img-fluid"  src="{% static 'img/main-bg.png' %}" alt="My image">
+			</div> 
+		</div>
+		</div>
+		</div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-us">
+	<!-- who we are -->
+	<div class="container-fluid mb-5 my-5">
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-md-9 mx-auto text-center mt-5">
+					<h1 class="text-lead my-4">Who we are</h1>
+					<style>/*! elementor - v3.14.0 - 26-06-2023 */
+						.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#69727d;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#69727d;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}
+					</style>
+					<p>Our writing service is a custom writing service that makes college life and office work easier. 
+						We help students and professionals make their busy days hassle-free. 
+						With our service, any deadline is manageable and any paper is superb.</p>				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-19db0fd elementor-section-boxed elementor-section-height-default elementor-section-height-default text-center" data-id="19db0fd" data-element_type="section">
+	<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-26561e9" data-id="26561e9" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+			<section class="elementor-section elementor-inner-section elementor-element elementor-element-4c68f2c elementor-section-height-min-height elementor-section-boxed elementor-section-height-default" data-id="4c68f2c" data-element_type="section">
+	<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-de4e6d6" data-id="de4e6d6" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+			<div class="elementor-element elementor-element-009199e elementor-widget elementor-widget-heading" data-id="009199e" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">Plagiarism-free papers</h4>		</div>
+</div>
+<div class="elementor-element elementor-element-ed36550 elementor-widget elementor-widget-text-editor" data-id="ed36550" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+		<p>We write samples of works from scratch only and double-check each paper with premium anti-plagiarism software. Want proof? Get a plagiarism report upon request.</p>						</div>
+</div>
+<div class="elementor-element elementor-element-0710f11 elementor-widget elementor-widget-spacer" data-id="0710f11" data-element_type="widget" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.14.0 - 26-06-2023 */
+.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}</style>		<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-f624f7d" data-id="f624f7d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+			<div class="elementor-element elementor-element-594cd7f elementor-widget elementor-widget-heading" data-id="594cd7f" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">Timely & quick delivery</h4>		</div>
+</div>
+<div class="elementor-element elementor-element-a972720 elementor-widget elementor-widget-text-editor" data-id="a972720" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+		<p>Have only a few days to complete an assignment? We complete papers in just a few hours &#8211; starting from 3 hours and onwards.</p>						</div>
+</div>
+<div class="elementor-element elementor-element-0c533e8 elementor-widget elementor-widget-spacer" data-id="0c533e8" data-element_type="widget" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b9b8d66" data-id="b9b8d66" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+			<div class="elementor-element elementor-element-df6a392 elementor-widget elementor-widget-heading" data-id="df6a392" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">Reasonable prices</h4>		</div>
+</div>
+<div class="elementor-element elementor-element-8c2111d elementor-widget elementor-widget-text-editor" data-id="8c2111d" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+		<p>We offer essays from $10 per page and give discounts to returning clients.</p>						</div>
+</div>
+<div class="elementor-element elementor-element-4017e1b elementor-widget elementor-widget-spacer" data-id="4017e1b" data-element_type="widget" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-1f9c097" data-id="1f9c097" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+			<div class="elementor-element elementor-element-5e89b2f elementor-widget elementor-widget-heading" data-id="5e89b2f" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">Full confidentiality</h4>		</div>
+</div>
+<div class="elementor-element elementor-element-e00dc34 elementor-widget elementor-widget-text-editor" data-id="e00dc34" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+		<p>We ask for the minimum of personal info to process the payment. You can feel totally secure with us, as we never share the data we get from you.</p>						</div>
+</div>
+<div class="elementor-element elementor-element-83f03fb elementor-widget elementor-widget-spacer" data-id="83f03fb" data-element_type="widget" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		</div>
+</section>
+</div>
+</div>
+		</div>
+</section>
+
+
+<!-- Services Section -->
+<section class="services">
+	<div class="container-fluid mb-5 my-5">
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-md-9 mx-auto text-center mt-5">
+					<h1 class="text-lead my-4">Our Services</h1>
+					<p>We offer all types of academic and professional papers. If you find it hard to balance 
+						studies with the rest of your life &#8211; our service is just for you. 
+						You would appreciate it too so don&#8217;t be shy to recommend us!</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 mx-auto">
+						<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title"> Academic Writing </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance 
+								studies with the rest of your life &#8211; our service is just for you.</p>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="col-md-4 mx-auto">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title"> Business Plans </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance
+								studies with the rest of your life &#8211; our service is just for you.
+								                    </p>
+		                </div>
+					</div>
+				</div>
+				<br>
+		            <div class="col-md-4 mx-auto">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title">Professional Resume </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance
+								studies with the rest of your life &#8211; our service is just for you.
+								                    </p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
+
+<!-- Why Choose SmartWriter Section -->
+<section class="why-choose">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-9 mx-auto text-center">
+                <h1 class="text-lead my-4">Why Choose SmartWriter</h1>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <i class="fa fa-check-circle fa-3x mb-3"></i>
+						<h4>High-Quality Content</h4>
+						<p>Our team of expert writers ensures top-notch quality in every piece of writing.</p>
+					</div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fa fa-graduation-cap fa-3x mb-3"></i>
+                        <h4>Expert Writers</h4>
+                        <p>Our team of experienced writers ensures top-quality content for your needs.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fa fa-lock fa-3x mb-3"></i>
+                        <h4>Confidentiality</h4>
+                        <p>Your information is safe with us. We prioritize your privacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-9 mx-auto text-center">
+                <h1 class="text-lead my-4">Testimonials</h1>
+                <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p class="testimonial-text">"SmartWriter helped me achieve academic success like never before. Their dedication to quality is unparalleled."</p>
+                            <p class="testimonial-author">- John Doe</p>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="testimonial-text">"I'm extremely satisfied with the professional resume I received from SmartWriter. It made a significant difference in my job search."</p>
+                            <p class="testimonial-author">- Jane Smith</p>
+                        </div>
+                        <!-- Add more testimonials here -->
+                    </div>
+                    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="contact">
+    <!-- Contact Form and Information Here -->
+</section>
+
+<!-- Site footer -->
+<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<h6>About</h6>
+				<p class="text-justify">SmartWriter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed sunt non obcaecati, vero ipsam, aut, fugit consectetur asperiores rem culpa placeat quo, enim odit. At reiciendis consectetur totam deleniti laudantium sit, natus quia qui! Ipsum quis quos quidem aliquid, illum.</p>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<h6>Quick Links</h6>
+				<ul class="footer-links">
+				<li><a href="http://smartwriter.leencotech.com/about/">About Us</a></li>
+				<li><a href="http://smartwriter.leencotech.com/contact/">Contact Us</a></li>
+				<li><a href="http://smartwriter.leencotech.com/privacy-policy/">Privacy Policy</a></li>
+				</ul>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<ul class="social-icons">
+					<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+					</ul>	
+			</div>
+
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<div class="row">
+			<div class="col-md-8 col-sm-6 col-xs-12 text-center">
+				<p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+			<a href="leencotech.com">Leen-Co Tech Ltd</a>.
+				</p>
+			</div>
+
+			<!-- <div class="col-md-4 col-sm-6 col-xs-12">
+				<ul class="social-icons">
+				<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+				<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+				</ul>
+			</div> -->
+			</div>
+		</div>
+	</footer>
+	<!-- end -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

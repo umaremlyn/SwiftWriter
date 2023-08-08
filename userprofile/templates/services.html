@@ -1,0 +1,173 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'userprofile/css/landing.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <title>SmartWriter</title>
+    <link rel="stylesheet" href="{% static 'css/opskill-widgets.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/classic-themes.min.css' %}">
+    <!-- Your additional stylesheets -->
+
+    <!-- Your custom inline styles -->
+    <style>
+    	body{
+    		background-color: #f8f9fa;
+    	}
+		.hero {
+        background-color: #87CEEB; /* Add this line to style the Hero section background */
+    }
+  
+    </style>
+</head>
+<body class="home">
+
+<!-- Header Section -->
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-white">
+		<div class="container">
+			<div class="logo">
+				<a class="navbar-brand" href="/">SmartWriter
+					<!-- <img src="{% static 'images/logo.png' %}" alt="SmartWriter Logo"> -->
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <!-- <li class="nav-item active"><a href="#">Home</a></li> -->
+				  <li class="nav-item">
+			        <a class="nav-link" href="#">Services</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">How It Works</a></li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About Us</a></li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Contact Us</a></li>
+		        </ul>
+				{% if user.is_authenticated %}
+				<ul class="navbar-nav my-lg-0">
+				 <a href="/logout/" class="btn btn-success">Logout</a>
+				</ul>
+				{% else %}
+				 <ul class="navbar-nav my-lg-0">
+				 <a href="/login/" class="btn btn-success">Get Started</a>
+				</ul>
+				{% endif %}
+			 </div>
+	   </div>
+   </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+	<div class="container-fluid bg-white py-5">
+		<div class="container mb-5">
+			<div class="row mb-5">
+				<div class="col-md-6 my-5 py-5">
+					<h1 class="mt-5">Unlock Your Potential with Expert Writing Services</h1>
+					<p class="my-4">From Academic Excellence to Professional Success</p>
+					<a href="#services" class="btn btn-lg mt-5 btn-success">    Explore Our Services   </a> 
+			</div>
+			<div class="col-md-6 my-5 py-5">
+			<img class="img-fluid"  src="{% static 'img/main-bg.png' %}" alt="My image">
+			</div> 
+		</div>
+		</div>
+		</div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+	<div class="container-fluid mb-5 my-5">
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-md-9 mx-auto text-center mt-5">
+					<h1 class="text-lead my-4">Our Services</h1>
+					<p>We offer all types of academic and professional papers. If you find it hard to balance 
+						studies with the rest of your life &#8211; our service is just for you. 
+						With our service, you can have all the time you need to excel in your career, 
+						be the mother you can be, or simply take care of your health. 
+						You would appreciate it too so don&#8217;t be shy to recommend us!</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 mx-auto">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title"> Academic Writing </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance 
+								studies with the rest of your life &#8211; our service is just for you.</p>
+							<a href="/order" class="btn btn-primary">Order</a>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="col-md-4 mx-auto">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title"> Business Plans </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance
+								studies with the rest of your life &#8211; our service is just for you.
+								                    </p>
+							<a href="/order" class="btn btn-primary">Order</a>
+							                 </div>
+					</div>
+				</div>
+				<br>
+				            <div class="col-md-4 mx-auto">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title"> Report Writing </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance
+								studies with the rest of your life &#8211; our service is just for you.
+								                    </p>
+							<a href="/order" class="btn btn-primary">Order</a>
+							                 </div>
+					</div>
+				</div>
+				<br>
+				            <div class="col-md-4 mx-auto">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Professional Resume </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance
+								studies with the rest of your life &#8211; our service is just for you.
+								                    </p>
+							<a href="/order" class="btn btn-primary">Order</a>
+							                 </div>
+					</div>
+				</div>
+				<br>
+				            <div class="col-md-4 mx-auto">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Homework Assistance </h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance
+								studies with the rest of your life &#8211; our service is just for you.
+								                    </p>
+							<a href="/order" class="btn btn-primary">Order</a>
+							                 </div>
+					</div>
+				</div>
+				<br>
+				            <div class="col-md-4 mx-auto">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title"> Creative Writing</h5>
+							<p class="card-text">We offer all types of academic papers. If you find it hard to balance
+								studies with the rest of your life &#8211; our service is just for you.
+								                    </p>
+							<a href="/order" class="btn btn-primary">Order</a>
+							                 </div>
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
